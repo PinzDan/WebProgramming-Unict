@@ -1,0 +1,120 @@
+/* importazione font
+    Nome font: Inconsolata
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+
+
+
+body{
+    font-family: 'Inconsolata';
+    background-color:#DCDCDC;
+}
+
+#header {
+    height: calc(100%/3);
+    width: 96vw;
+    margin-top: 1vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    align-items: center;
+    display: flex;
+}
+
+#navbar {
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+#navButton a{
+    padding: 20px;
+    margin: 20px;
+    cursor: pointer;
+    
+}
+
+.firstButton {
+     color: white;
+     background-color: black;
+     border-radius: 10px;
+     font-weight: bolder;
+}
+
+.secondButton {
+
+    color: black;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    font-weight: bolder;
+
+}
+
+.secondButton:hover, .firstButton:hover{
+    transition: 0.5s;
+    color: white;
+    background-color: rgb(38, 38, 38);
+    
+}
+
+
+#researchBar input{
+    width: 90%;
+    
+}
+#researchBar, #researchBar input {
+    border-radius: 8px;
+    border: none;
+    padding: 1vw;
+    padding: 1vh; 
+    flex-grow: 1;
+    color: gray;
+    background-color: #B6B6B6;
+}
+
+#researchBar :focus{
+    transition: 1s;
+    background-color: rgb(38, 38, 38);
+    outline: none; /* rimuove il contorno di default */
+}
+.dropdown-menu li{
+    list-style-type: none;
+}
+
+/* FINE HEADER */
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+#main-inscription {
+    align-items: center;
+    width: 90vw;
+    font-size: 6vw;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/* gestione responsive */
+@media (max-width: 768px){
+
+    #navbar a{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+    }
+    #main-inscription{
+        font-size:1vh;
+    }
+
+
+}
+
