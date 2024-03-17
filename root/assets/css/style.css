@@ -5,29 +5,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 
 
+:root {
+    --primary-color:white;
+    --background-gray:#DCDCDC;
+    --string-color:#222;
+    --default-button-radius: 10px;
+    --default-font-size:medium;
+}
 
 
 body{
     font-family: 'Inconsolata';
-    background-color:#DCDCDC;
-    color:#222;
+    margin: 0px;   
+}
+
+/* Gestione 1° Sezione */
+
+#firstSection {
+    padding: 5%;
+    width: 100vw;
+    background-color: var(--background-gray);
+    color:var(--string-color);
 }
 
 #header {
     height: calc(100%/3);
-    width: 90vw;
-    margin-top: 1vh;
-    margin-left: 2vw;
-    margin-right: 2vw;
+    width: 100%;
+    margin: auto;
     align-items: center;
     display: flex;
+    justify-content: center;
 }
 
-#navbar {
-    
-    display: flex;
-    align-items: center;
-}
+
 
 #navButton a{
     padding: 20px;
@@ -36,35 +46,33 @@ body{
     
 }
 
+/*BeproButton*/
 .firstButton {
-     color: white;
+     color: var(--primary-color);
      background-color: black;
-     border-radius: 10px;
+     border-radius: var(--default-button-radius);
      font-weight: bolder;
 }
 
+/*Submitbutton*/
 .secondButton {
 
-    background-color: white;
+    background-color: var(--primary-color);
     border: 1px solid;
-    border-radius: 10px;
+    border-radius: var(--default-button-radius);
     font-weight: bolder;
 
 }
 
 .secondButton:hover, .firstButton:hover{
     transition: 0.5s;
-    color: white;
+    color: var(--primary-color);
     background-color: rgb(38, 38, 38);
 }
 
-
-#researchBar input{
-    width: 90%;
-    
-}
 #researchBar, #researchBar input {
-    border-radius: 8px;
+    
+    border-radius:var(--default-button-radius);
     border: none;
     padding: 1vw;
     padding: 1vh; 
@@ -88,16 +96,22 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100vw;
-    /*height: 50vh;*/
+    align-items: center;
+    width: 100%;
+
 }
 
+
 #main-inscription {
-    align-items: center;
-    width: 90vw;
-    font-size: 6vw;
     padding-left: 5%;
     padding-right: 5%;
+
+}
+
+/* SITE OF THE DAY */
+.siteoftheday{
+    margin: 5%;
+    width: 100%;
 }
 
 .movement-string{
@@ -110,22 +124,88 @@ body{
     font-size: 5vw;
 }
 
-.main-image img{
-    background-color: #222;
-    width: 90vw;
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: relative; /* per spostare successivamente .BottomString*/
+    width: 100%;
+    height: 80vh;
     border-radius: 10px;
+    border: none;
     margin-top: 2%;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.wallpapers13.com%2Fwp-content%2Fuploads%2F2015%2F12%2FPlanets-in-space-hd-wallpaper.jpg&f=1&nofb=1&ipt=1d8913a73ebb4aeec0a8553c1fc098125322ae64f5ef206fb51d32908ddb2a26&ipo=images");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+
+.central{
+  
+    
+    padding: 20px;
+    border-radius: var(--default-button-radius);
+    border: 1px solid var(--primary-color);
+    
+    opacity: 0.5;
+}
+
+#bottom-string{
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    overflow: hidden;
+}
+
+.left2 {
+    font-weight: bolder;
+    font-size: 5vw;
+
+}
+.main-container :hover {
+    opacity:1;
+    transition: 1s;
+
+}
+
+
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bolder;
+    text-decoration: none;
+    margin-top: 2%;
+    text-decoration: underline 2px gray;
+
+    
+}
+.pak, .pak img{
+    width: 50px;
+    height: 50px;
+    margin: 2%;
+    border-radius: 50%;
+    cursor: default;
+    text-decoration: none;
 }
 
 /* gestione responsive */
-@media (max-width: 768px){
+@media (max-width: 900px){
 
     #navbar a{
         display: flex;
         flex-direction: column;
         padding: 20px;
         background-color: black;
-        color: white;
+        color: var(--primary-color);
         border-radius: 10px;
     }
     #main-inscription{
@@ -133,5 +213,39 @@ body{
     }
 
 
+    .main-container {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        border-radius: 10px;
+        border: none;
+        margin-top: 2%;
+        background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.wallpapers13.com%2Fwp-content%2Fuploads%2F2015%2F12%2FPlanets-in-space-hd-wallpaper.jpg&f=1&nofb=1&ipt=1d8913a73ebb4aeec0a8553c1fc098125322ae64f5ef206fb51d32908ddb2a26&ipo=images");
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.9;
+        cursor: pointer;
+        color: var(--primary-color);
+    }
+    
 }
+
+   /* Gestione seconda sezione */
+
+
+   #secondSection{
+    margin-left: 2%;
+    color: #222;
+    width: 100%;
+   }
+
+  
+
+    #first-container h2{
+        font-size: var(--default-font-size);
+        font-weight: normal;
+    }
+    
+    
+    
 
