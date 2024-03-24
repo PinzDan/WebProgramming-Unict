@@ -130,15 +130,10 @@ body{
 }
 
 .movement-string{
-  font-size: 4vw;
+  font-size: 40px;
   font-weight: lighter;
-  margin-top: 0;
+  margin-top: 2%;
 }
-
-.movement-string strong{
-    font-size: 5vw;
-}
-
 
 .main-container {
     display: flex;
